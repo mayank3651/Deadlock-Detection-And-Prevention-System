@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deadlock Detection & Prevention</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="watermark">TEAM ZYPHER</div>
+  <header>🧠 Deadlock Detection & Prevention System</header>
+
+  <main>
+    <!-- GIF + Conditions + Solutions -->
+    <section class="tech-block hightech gif-conditions-layout">
+      <div class="gif-left">
+        <img src="deadlock.gif" alt="Deadlock GIF" />
+      </div>
+      <div class="info-right">
+        <h2>🔗 Deadlock Conditions & Solutions</h2>
+        <div class="grid-info">
+          <div class="conditions">
+            <h3>Conditions</h3>
+            <ul>
+              <li><strong>Mutual Exclusion</strong><br>Only one process accesses resource at a time.</li>
+              <li><strong>Hold & Wait</strong><br>Process holds and requests more.</li>
+              <li><strong>No Preemption</strong><br>Resource can't be forcibly taken.</li>
+              <li><strong>Circular Wait</strong><br>Processes wait in cycle.</li>
+            </ul>
+          </div>
+          <div class="solutions">
+            <h3>Solutions</h3>
+            <ul>
+              <li>Resource sharing or spooling.</li>
+              <li>Request all at once or release held.</li>
+              <li>Allow preemption based on priority.</li>
+              <li>Global ordering of resource access.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upload + Analyze -->
+    <section class="tech-block upload-section hightech">
+      <h2>📁 Upload Process File</h2>
+      <input type="file" id="fileInput" accept=".csv" />
+      <div class="button-group">
+        <button onclick="processFile('detect')">Detect Deadlock</button>
+        <button onclick="processFile('prevent')">Prevent Deadlock</button>
+      </div>
+    </section>
+
+    <!-- Result Block -->
+    <section class="tech-block result-section hightech">
+      <h2>🧩 Analysis Result</h2>
+      <div id="resultBlock" class="result-box"></div>
+    </section>
+
+    <!-- Gantt Chart -->
+    <section class="tech-block gantt-section hightech">
+      <h2>📊 Gantt Chart</h2>
+      <canvas id="ganttChart" width="700" height="300"></canvas>
+    </section>
+
+    <!-- Feedback -->
+    <section class="tech-block feedback-section hightech">
+      <h2>💡 Feedback</h2>
+      <textarea id="feedbackInput" placeholder="Your feedback..."></textarea>
+      <button onclick="submitFeedback()">Submit</button>
+      <div id="feedbackAck"></div>
+    </section>
+
+    <!-- Zypher Assistant -->
+    <div id="assistant">
+      <img src="zypher-peacock.png" alt="Zypher Assistant" />
+      <div id="assistant-box">
+        <p>🦚 What do you wanna know?</p>
+        <input id="assistantInput" placeholder="Ask about deadlock..." />
+        <button onclick="askZypher()">Ask</button>
+        <p id="assistantResponse"></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Made by <strong>Team ZYPHER</strong> —
+    Leader: Shruti Dhiman |
+    Members: Mayank Singh, Deepanshu Gautam, Arpit Singh
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
