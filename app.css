@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-image: url("https://i.ibb.co/6N3nccF/anime-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.login-container input {
+  padding: 10px;
+  font-size: 1.2em;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid #ff69b4;
+}
+
+.login-container button {
+  background-color: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+}
+
+.chat-container {
+  max-width: 700px;
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 2px solid #ff69b4;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+.chat-header {
+  background: #ff69b4;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.header-text {
+  margin-left: 15px;
+  font-size: 1.5em;
+}
+
+.avatar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.chat-bubble {
+  background: #fff;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin: 10px 0;
+  max-width: 70%;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.chat-bubble.self {
+  background: #d2ffe6;
+  margin-left: auto;
+}
+
+.bubble-content {
+  font-size: 1em;
+}
+
+.bubble-time {
+  font-size: 0.7em;
+  text-align: right;
+  color: #888;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 2px solid #ff69b4;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1em;
+}
+
+.chat-input button {
+  background: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
